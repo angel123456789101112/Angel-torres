@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sneakers World</title>
+
+  <style>
+    body {
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    header,
+    nav,
+    article,
+    aside,
+    footer {
+      background-color: #6c6867;
+      color: black;
+      font-size: 40px;
+      text-align: center;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+
+    #logo {
+      float: right;
+      margin-right: 10px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    main {
+      flex: 1 50%;
+      margin: 10px;
+    }
+
+    header,
+    footer {
+      flex: 1 100%;
+    }
+
+    aside {
+      flex: 1 30%;
+      margin: 10px;
+    }
+
+    nav.menu-principal {
+      background: linear-gradient(to right, #2b2422, #5a5554);
+      padding: 12px 0;
+      margin: 0 20px 20px 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+      flex: 1 100%;
+    }
+
+    nav.menu-principal a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    nav.menu-principal a:hover {
+      background-color: #5a5554;
+    }
+
+    .cintillo-imagen {
+      position: relative;
+      overflow: hidden;
+      background-color: black;
+      padding: 20px;
+      margin: 0 20px 20px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+ 
+
+    .slider {
+      display: flex;
+      gap: 20px;
+      animation: desplazarCintillo 20s linear infinite;
+    }
+    .slider img {
+  height: 400px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slider img:hover {
+  transform: scale(2.0);
+  box-shadow: 0 40px 50px rgba(255, 255, 255, 0.4);
+  z-index: 2;
+}
+.slider img {
+  height: 400px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 50px; //
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cintillo-imagen.slider img:hover{
+    transform: scale(2.0);
+    z-index: 50;
+}
+
+.slider img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.4);
+  z-index: 2;
+}
+
+
+
+    .slider img {
+      height: 400px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    @keyframes desplazarCintillo {
+      0% {
+        transform: translateX(0%);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img id="logo" height="150" width="150" src="post de instagram asesor imagen minimalista neutro.gif" alt="Logo Sneakers">
+    <h1>Sneakers World</h1>
+  </header>
+
+  <nav class="menu-principal">
+    <a href="#">Inicio</a>
+    <a href="#">Nosotros</a>
+    <a href="#">Mis productos</a>
+  </nav>
+
+  <div class="container">
+
+    <main>
+      <article>
+        <h2>Lo más nuevo</h2>
+        <p>Los sneakers mejoran tu vida</p>
+      </article>
+
+      <article>
+        <h2>Ofertas</h2>
+        <p>Sneakers para ti</p>
+      </article>
+    </main>
+
+    <aside>
+      <h2>¿Quiénes somos?</h2>
+      <p>Somos apasionados por los sneakers, ofreciendo estilo y comodidad en cada paso.</p>
+    </aside>
+
+  </div>
+
+  <div class="cintillo-imagen">
+    <div class="slider">
+      <img src="imagen2.jpg" alt="Sneaker 1">
+      <img src="imagen3.jpg" alt="Sneaker 2">
+      <img src="imagen4.jpg" alt="Sneaker 3">
+      <img src="imag9.jpg" alt="Sneaker 4">
+      <img src="imag10.jpg" alt="Sneaker 5">
+      <img src="imag11.jpg" alt="Sneaker 6">
+      <img src="imag12.jpg" alt="Sneaker 7">
+
+      <!-- Duplicar para efecto continuo -->
+      <img src="imagen2.jpg" alt="Sneaker 1">
+      <img src="imagen3.jpg" alt="Sneaker 2">
+      <img src="imagen4.jpg" alt="Sneaker 3">
+      <img src="imag9.jpg" alt="Sneaker 4">
+      <img src="imag10.jpg" alt="Sneaker 5">
+      <img src="imag11.jpg" alt="Sneaker 6">
+      <img src="imag12.jpg" alt="Sneaker 7">
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Sneakers World. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+
+</html>
